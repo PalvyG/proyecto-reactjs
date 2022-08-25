@@ -12,6 +12,9 @@ main {
   margin-right: 5vw;
   margin-top: 2vw;
 }
+main p {
+  color: white;
+}
 
 ul {
   list-style: none;
@@ -43,7 +46,7 @@ ul {
   object-fit: cover;
   box-shadow: 0px 0px 10px 1px rgb(50, 50, 50);
 }
-.navbar .navbar_links {
+.navbar .navbar__links {
   text-align: center;
   top: 50%;
   left: 50%;
@@ -53,11 +56,26 @@ ul {
   gap: 10px;
   box-shadow: 0px 0px 10px 1px rgb(50, 50, 50);
 }
-.navbar .navbar_signin {
+.navbar .navbar__signin-cart {
+  display: flex;
+  align-items: center;
   padding-right: 5vw;
+  gap: 20px;
 }
-.navbar .navbar_signin button {
+.navbar .navbar__signin-cart button {
   box-shadow: 0px 0px 10px 1px rgb(50, 50, 50);
+}
+.navbar .navbar__signin-cart #cart-btn {
+  display: flex;
+  height: 38px;
+  align-items: center;
+  gap: 10px;
+}
+.navbar .navbar__signin-cart #cart-btn .bg-dark {
+  background-color: #9c2632 !important;
+}
+.navbar .navbar__signin-cart .fa-cart-shopping {
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=App.css.map */

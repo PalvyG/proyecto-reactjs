@@ -5,7 +5,7 @@
     justify-content: space-between;
     height: 100px;
     background-color: #5d5d5d;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='105' viewBox='0 0 80 105'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='death-star' fill='%23aaaaaa' fill-opacity='0.52'%3E%3Cpath d='M20 10a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm15 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zM20 75a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zm30-65a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm0 65a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zM35 10a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zM5 45a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zm60 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");    
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='105' viewBox='0 0 80 105'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='death-star' fill='%23aaaaaa' fill-opacity='0.52'%3E%3Cpath d='M20 10a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm15 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zM20 75a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zm30-65a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm0 65a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zM35 10a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zM5 45a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zm60 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     background-size: 100px;
     background-position: center;
     box-shadow: $box-shadow;
@@ -25,9 +25,9 @@
             object-fit: cover;
             box-shadow: $box-shadow;
         }
-    };
+    }
 
-    .navbar_links {
+    .navbar__links {
         text-align: center;
         top: 50%;
         left: 50%;
@@ -38,11 +38,31 @@
         box-shadow: $box-shadow;
     }
 
-    .navbar_signin {
+    .navbar__signin-cart {
+        display: flex;
+        align-items: center;
         padding-right: 5vw;
+        gap: 20px;
 
         button {
             box-shadow: $box-shadow;
         }
+
+        #cart-btn {
+            display: flex;
+            height: 38px;
+            align-items: center;
+            gap: 10px;
+
+            .bg-dark {
+                background-color: #9c2632 !important;
+            }
+        }
+
+        .fa-cart-shopping {
+            font-size: 20px;
+        }
     }
-};
+}
+
+;
