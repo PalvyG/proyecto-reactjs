@@ -1,4 +1,4 @@
-import ItemListContainer from "./ItemListContainer.js";
+import ItemListContainer from "../containers/ItemListContainer.js";
 
 const Main = () => {
     return (

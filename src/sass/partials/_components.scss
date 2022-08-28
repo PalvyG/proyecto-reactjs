@@ -55,7 +55,7 @@
             gap: 10px;
 
             .bg-dark {
-                background-color: #9c2632 !important;
+                background-color: $red-btn-dark  !important;
             }
         }
 
@@ -64,5 +64,53 @@
         }
     }
 }
+
+.item-count {
+
+    background-color: $red-btn-dark-translucent;
+    
+    padding: 20px;
+    margin-left: 75px;
+    margin-top: 50px;
+    width: fit-content;
+    border-radius: $b-r-btn;
+
+    p {
+        text-align: left;
+    }
+
+    .item-count__cont {
+
+        div {
+            width: fit-content;
+
+            button {
+                box-shadow: $box-shadow;
+            }
+        }
+
+        .item-count__cont__ctrls {
+            align-items: baseline;
+            margin-bottom: 10px;
+            gap: 20px;
+            height: 50px;
+
+            p {
+                width: 10px;
+                text-align: center;
+            }
+
+            button {
+                width: 40px;
+            }
+        }
+
+        #btn-addToCart {
+            width: 130px;
+        }
+    }
+}
+
+
 
 ;
