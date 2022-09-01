@@ -1,15 +1,36 @@
 import { useState } from "react";
+import { useEffect } from "react";
 
 const ItemCount = (props) => {
-    const [qty, setQty] = useState(1)
+    
+    //EFFECT MOUNT
+    useEffect(() => {
+        console.log('Component ItemCount.js mounted.')
+    }, [])
 
+    
+    //STATE
+    const [qty, setQty] = useState(1)
+    
+    //ADD
     const qtyAdd = () => {
         qty < props.stock ? setQty(qty+1) : console.log('Quantity cannot surpass stock available (' + props.stock + ')')
     }
 
+    //SUBTRACT
     const qtySubtract = () => {
         qty > 1 ? setQty(qty-1) : console.log('Quantity cannot be less than 1')
     }
+    
+    //ALERT
+    const qtyAlert = () => {
+        alert('You have added ' + qty + ' units to your cart.')
+    }
+    
+    //EFFECT UPDATE QUANTITY
+    useEffect(() => {
+        console.log('Component ItemCount.js updated.')
+    }, [qty])
 
     return (
         <div className="item-count">
@@ -21,7 +42,7 @@ const ItemCount = (props) => {
                     <button className="btn btn-danger" onClick={qtyAdd}>+</button>
                 </div>
                 <div>
-                <button id="btn-addToCart" className="btn btn-danger">Add to cart</button>
+                <button id="btn-addToCart" className="btn btn-danger" onClick={qtyAlert}>Add to cart</button>
                 </div>
             </div>
         </div>

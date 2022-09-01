@@ -1,0 +1,18 @@
+@media screen and (min-width: 992px) {
+    .card-responsive {
+        min-width: 250px;
+        max-width: 300px;
+    }
+}
+
+@media screen and (min-width: 510px) and (max-width:991px) {
+    .card {
+        min-width: 200px !important;
+    }
+}
+
+@media screen and (min-width: 50px) and (max-width:509px) {
+    .card {
+        min-width: 125px !important;
+    }
+}
