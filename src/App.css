@@ -94,44 +94,9 @@ ul {
   margin-bottom: 50px;
 }
 
-.item-count {
-  background-color: rgba(80, 14, 20, 0.5764705882);
-  margin-bottom: 5vh;
-  padding: 20px;
-  margin-left: 75px;
-  margin-top: 50px;
-  width: fit-content;
-  border-radius: 4px;
-}
-.item-count p {
-  text-align: left;
-}
-.item-count .item-count__cont div {
-  width: fit-content;
-}
-.item-count .item-count__cont div button {
-  box-shadow: 0px 0px 10px 1px rgb(50, 50, 50);
-}
-.item-count .item-count__cont .item-count__cont__ctrls {
-  align-items: baseline;
-  margin-bottom: 10px;
-  gap: 20px;
-  height: 50px;
-}
-.item-count .item-count__cont .item-count__cont__ctrls p {
-  width: 10px;
-  text-align: center;
-}
-.item-count .item-count__cont .item-count__cont__ctrls button {
-  width: 40px;
-}
-.item-count .item-count__cont #btn-addToCart {
-  width: 130px;
-}
-
 .card {
   border-radius: 10px;
-  background-color: rgba(80, 14, 20, 0.5764705882);
+  background-color: rgba(73, 3, 9, 0.6901960784);
 }
 .card .card-img-container {
   width: 100%;
@@ -159,6 +124,61 @@ ul {
 .card .card-body .text-center .product-price {
   font-size: 115%;
   margin-bottom: 5px;
+}
+
+.product-details {
+  position: relative;
+  border-radius: 10px;
+  background-color: rgba(73, 3, 9, 0.6901960784);
+  gap: 50px;
+  padding: 20px;
+}
+.product-details .details__img {
+  border-radius: 10px;
+}
+.product-details .details__text {
+  height: 100%;
+}
+.product-details .details__text .details__text__title {
+  font-size: 300%;
+}
+.product-details .details__text .details__text__desc {
+  font-size: 125%;
+}
+
+.item-count {
+  position: absolute;
+  bottom: 20px;
+  background-color: rgba(65, 10, 14, 0.8470588235);
+  padding: 20px;
+  width: fit-content;
+  border-radius: 10px;
+  align-items: flex-end;
+}
+.item-count p {
+  text-align: left;
+}
+.item-count .item-count__cont div {
+  width: fit-content;
+}
+.item-count .item-count__cont div button {
+  box-shadow: 0px 0px 10px 1px rgb(50, 50, 50);
+}
+.item-count .item-count__cont .item-count__cont__ctrls {
+  align-items: baseline;
+  margin-bottom: 10px;
+  gap: 20px;
+  height: 50px;
+}
+.item-count .item-count__cont .item-count__cont__ctrls p {
+  width: 10px;
+  text-align: center;
+}
+.item-count .item-count__cont .item-count__cont__ctrls button {
+  width: 40px;
+}
+.item-count .item-count__cont #btn-addToCart {
+  width: 130px;
 }
 
 @media screen and (min-width: 992px) {

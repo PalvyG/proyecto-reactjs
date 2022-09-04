@@ -32,7 +32,7 @@ const ItemList = () => {
                         key={item.id}
                         title={item.title}
                         price={item.price}
-                        img={item.pictureUrl}
+                        img={item.img}
                     />
                 ))
             }

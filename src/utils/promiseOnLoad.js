@@ -5,9 +5,11 @@ export const promiseOnLoad = (procedure) => {
         if (validation) {
             setTimeout(() => {
                 resolve(procedure)
-            }, 2000)
+            }, 500)
         } else {
-            reject('Timed out waiting for products to load.')
+            reject('Timeout.')
         }
     })
 }
+
+//EXPORTED TO: ../components/ItemList.js

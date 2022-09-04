@@ -69,15 +69,82 @@
     margin-bottom: 50px;
 }
 
+
+.card {
+    border-radius: 10px;
+    background-color: $red-bg-dark-translucent;
+    
+    .card-img-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        padding: 10px;
+        
+        .card-img-top {
+            flex-shrink: 0 !important;
+            min-width: 100% !important;
+            min-height: 100% !important;
+            border-radius: $b-r-img;
+        }
+    }
+
+    .card-body {
+        color: white;
+
+        .text-center {
+            
+            .product-title {
+                font-size: 150%;
+                font-weight: 500;
+                margin-bottom: 10px;
+            }
+
+            .product-price {
+                font-size: 115%;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+.product-details {
+    
+    position: relative;
+    border-radius: $b-r-img;
+    background-color: $red-bg-dark-translucent;
+    gap: 50px;
+    padding: 20px;
+
+    .details__img {
+        border-radius: $b-r-img;
+    }
+
+    .details__text {
+        
+        height: 100%;
+
+        .details__text__title {
+            font-size: 300%;
+        }
+        
+        .details__text__desc {
+            font-size: 125%;
+        }
+    }
+}
+
 .item-count {
 
-    background-color: $red-btn-dark-translucent;
-    margin-bottom: 5vh;
+    position: absolute;
+    bottom: 20px;
+    background-color: $red-bg-dark;
     padding: 20px;
-    margin-left: 75px;
-    margin-top: 50px;
     width: fit-content;
-    border-radius: $b-r-btn;
+    border-radius: $b-r-img;
+    align-items: flex-end;
 
     p {
         text-align: left;
@@ -114,46 +181,4 @@
         }
     }
 }
-
-.card {
-    border-radius: 10px;
-    background-color: $red-btn-dark-translucent;
-
-    .card-img-container {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        padding: 10px;
-
-        .card-img-top {
-            flex-shrink: 0 !important;
-            min-width: 100% !important;
-            min-height: 100% !important;
-            border-radius: 10px;
-        }
-    } 
-
-    .card-body {
-        color: white;
-
-        .text-center {
-            
-            .product-title {
-                font-size: 150%;
-                font-weight: 500;
-                margin-bottom: 10px;
-            }
-
-            .product-price {
-                font-size: 115%;
-                margin-bottom: 5px;
-            }
-        }
-    }
-}
-
-
 ;

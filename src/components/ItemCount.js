@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const ItemCount = (props) => {
     
@@ -34,7 +33,6 @@ const ItemCount = (props) => {
 
     return (
         <div className="item-count">
-            <p>Product Name</p>
             <div className="item-count__cont">
                 <div className="item-count__cont__ctrls d-flex">
                     <button className="btn btn-danger" onClick={qtySubtract}>-</button>
@@ -51,4 +49,4 @@ const ItemCount = (props) => {
 
 export default ItemCount;
 
-// EXPORTED TO: ItemListContainer.js
+// EXPORTED TO: ItemDetail.js
