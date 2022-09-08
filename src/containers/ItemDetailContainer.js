@@ -19,7 +19,7 @@ const ItemDetailContainer = () => {
     //EFFECT UPDATE PRODUCTS
 
     useEffect(() => {
-        promiseOnLoad(products.find(product => product.id === id))
+        promiseOnLoad(products.find(product => product.id === parseInt(id)))
             .then(result => {
                 setProduct(result)
                 console.log('Component ItemDetailContainer.js updated.')

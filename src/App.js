@@ -11,9 +11,9 @@ const App = () => {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path='/' element={<ItemListContainer greeting='Bienvenido a GPDudes!'/>} />
-        <Route path='/category/:idCategory' element={<ItemListContainer />} />
-        <Route path='/product/:idProduct' element={<ItemDetailContainer />} />
+        <Route path='/' element={<ItemListContainer greeting='Bienvenido a GPDudes!' />} />
+        <Route path='/category/:id' element={<ItemListContainer />} />
+        <Route path='/product/:id' element={<ItemDetailContainer />} />
       </Routes>
     </BrowserRouter>
   );
