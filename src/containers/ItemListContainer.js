@@ -1,4 +1,3 @@
-import ItemCount from '../components/ItemCount.js';
 import ItemList from '../components/ItemList.js';
 import { useEffect } from 'react';
 import {products} from '../utils/products.js';
@@ -11,14 +10,13 @@ const ItemListContainer = (props) => {
     }, [])
 
     return (
-        <>
+        <main>
             <h1 className='greeting'>{props.greeting}</h1>
-            <ItemCount stock={5} />
             <ItemList products={products} />
-        </>
+        </main>
     );
 };
 
 export default ItemListContainer;
 
-//EXPORTED TO: ../components/Main.js
+//EXPORTED TO: ../App.js

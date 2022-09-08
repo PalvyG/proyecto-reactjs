@@ -68,6 +68,9 @@ ul {
   gap: 10px;
   box-shadow: 0px 0px 10px 1px rgb(50, 50, 50);
 }
+.navbar .navbar__links .btn-group {
+  border-radius: 50px !important;
+}
 .navbar .navbar__signin-cart {
   display: flex;
   align-items: center;
@@ -181,20 +184,63 @@ ul {
   width: 130px;
 }
 
+.border-radius-left {
+  border-radius: 4px 0px 0px 4px !important;
+}
+
+.border-radius-none {
+  border-radius: 0px !important;
+}
+
+.border-radius-right {
+  border-radius: 0px 4px 4px 0px !important;
+}
+
+#pepe {
+  margin-top: 100px;
+}
+
 @media screen and (min-width: 992px) {
   .card-responsive {
-    min-width: 250px;
-    max-width: 300px;
+    min-width: 300px;
+    max-width: 350px;
+  }
+  .card-responsive .product-title {
+    min-height: 72px;
   }
 }
-@media screen and (min-width: 510px) and (max-width: 991px) {
+@media screen and (min-width: 531px) and (max-width: 991px) {
   .card {
-    min-width: 200px !important;
+    min-width: 215px !important;
+    max-width: 300px !important;
+  }
+  .card .product-title {
+    font-size: 18px !important;
   }
 }
-@media screen and (min-width: 50px) and (max-width: 509px) {
-  .card {
-    min-width: 125px !important;
+@media screen and (min-width: 50px) and (max-width: 530px) {
+  .card-responsive {
+    padding: 5px;
+    margin-bottom: 15px !important;
+  }
+  .card-responsive .card {
+    min-width: 150px !important;
+  }
+  .card-responsive .card .product-title {
+    font-size: 14px !important;
+  }
+  .card-responsive .card .product-price {
+    font-size: 12px !important;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 364px) {
+  .product-title {
+    font-weight: 300 !important;
+  }
+}
+@media screen and (max-width: 320px) {
+  .product-title {
+    font-weight: 500 !important;
   }
 }
 

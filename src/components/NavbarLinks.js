@@ -1,24 +1,24 @@
+import { Link } from 'react-router-dom';
+
 const NavbarLinks = () => {
     return (
     <div className="navbar__links">
         <div className="btn-group">
-            <button type="button" className="btn btn-danger">
-                Home
+            <Link to='/category/gpu'>
+            <button type="button" className="btn btn-danger border-radius-left">
+                GPUs
             </button>
-            <button type="button" className="btn btn-danger">
-                About
+            </Link>
+            <Link to='/category/processor'>
+            <button type="button" className="btn btn-danger border-radius-none">
+                Processors
             </button>
-            <button type="button" className="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Products
+            </Link>
+            <Link to='/category/cooler'>
+            <button type="button" className="btn btn-danger border-radius-right">
+                Coolers
             </button>
-            <div className="dropdown-menu">
-                <a className="dropdown-item" href="all-products">All products</a>
-                <div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="gpus">GPUs</a>
-                <a className="dropdown-item" href="processors">Processors</a>
-                <a className="dropdown-item" href="power-supplies">Power Supplies</a>
-                <a className="dropdown-item" href="power-supplies">Coolers</a>
-            </div>
+            </Link>
         </div>
     </div>
     );

@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-
+import { Link } from 'react-router-dom';
 
 const Item = (props) => {
 
@@ -24,9 +24,11 @@ const Item = (props) => {
                     </div>
                 </div>
                 {/* Product actions */}
+                <Link to={`/product/${props.id}`}>
                 <div className="card-footer p-2 pt-0 border-top-0 bg-transparent">
-                    <div className="text-center"><a className="btn btn-danger mt-auto mb-2" href="showdetails">Show Details</a></div>
+                    <div className="text-center"><btn className="btn btn-danger mt-auto mb-2">Show Details</btn></div>
                 </div>
+                </Link>
             </div>
         </div>
     )

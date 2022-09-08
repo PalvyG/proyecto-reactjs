@@ -2,10 +2,14 @@ import ItemDetail from '../components/ItemDetail.js'
 import { useEffect, useState } from 'react'
 import { products } from '../utils/products.js'
 import { promiseOnLoad } from '../utils/promiseOnLoad.js'
+import { useParams } from 'react-router-dom'
 
 const ItemDetailContainer = () => {
     //STATE
     const [product, setProduct] = useState({});
+
+    //PARAMS
+    const { id } = useParams();
 
     //EFFECT MOUNT
     useEffect(() => {
@@ -15,7 +19,7 @@ const ItemDetailContainer = () => {
     //EFFECT UPDATE PRODUCTS
 
     useEffect(() => {
-        promiseOnLoad(products[9])
+        promiseOnLoad(products.find(product => product.id === id))
             .then(result => {
                 setProduct(result)
                 console.log('Component ItemDetailContainer.js updated.')
@@ -24,10 +28,12 @@ const ItemDetailContainer = () => {
     })
 
     return (
-        <ItemDetail item={product} />
+        <main>
+            <ItemDetail item={product} />
+        </main>
     )
 }
 
 export default ItemDetailContainer
 
-//EXPORTED TO: ../components/Main.js
+//EXPORTED TO: ../App.js

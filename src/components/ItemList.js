@@ -2,10 +2,14 @@ import Item from './Item.js'
 import { useEffect, useState } from 'react'
 import { products } from '../utils/products.js'
 import { promiseOnLoad } from '../utils/promiseOnLoad.js'
+import { useParams } from 'react-router-dom'
 
 const ItemList = () => {
     //STATE
     const [data, setData] = useState([]);
+
+    //PARAMS
+    const { id } = useParams();
 
     //EFFECT MOUNT
     useEffect(() => {
@@ -13,15 +17,23 @@ const ItemList = () => {
     }, [])
 
     //EFFECT UPDATE PRODUCTS
-
     useEffect(() => {
-        promiseOnLoad(products)
+        if (id) {
+        promiseOnLoad(products.filter(product => product.categoryId === id))
             .then(result => {
                 setData(result)
                 console.log('Component ItemList.js updated.')
             })
             .catch(error => console.error(error))
-    })
+        } else {
+            promiseOnLoad(products)
+            .then(result => {
+                setData(result)
+                console.log('Component ItemList.js updated.')
+            })
+            .catch(error => console.error(error))
+        } 
+    }, [id])
 
     return (
         <div id="container-products"
@@ -30,6 +42,7 @@ const ItemList = () => {
                 data.map(item => (
                     <Item
                         key={item.id}
+                        id={item.id}
                         title={item.title}
                         price={item.price}
                         img={item.img}

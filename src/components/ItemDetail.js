@@ -1,6 +1,6 @@
 import ItemCount from "./ItemCount"
 
-const ItemDetail = ({ item }) => {
+const ItemDetail = ({item}) => {
 
     return (
         <div id="container-products" className="product-details d-flex">

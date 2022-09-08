@@ -1,18 +1,52 @@
 @media screen and (min-width: 992px) {
     .card-responsive {
-        min-width: 250px;
-        max-width: 300px;
+        min-width: 300px;
+        max-width: 350px;
+
+        .product-title {
+            min-height: 72px;
+        }
     }
 }
 
-@media screen and (min-width: 510px) and (max-width:991px) {
+@media screen and (min-width: 531px) and (max-width:991px) {
     .card {
-        min-width: 200px !important;
+        min-width: 215px !important;
+        max-width: 300px !important;
+
+        .product-title {
+            font-size: 18px !important;
+        }
     }
 }
 
-@media screen and (min-width: 50px) and (max-width:509px) {
-    .card {
-        min-width: 125px !important;
+@media screen and (min-width: 50px) and (max-width:530px) {
+    .card-responsive {
+        padding: 5px;
+        margin-bottom: 15px !important;
+
+        .card {
+            min-width: 150px !important;
+
+            .product-title {
+                font-size: 14px !important;
+            }
+
+            .product-price {
+                font-size: 12px !important;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 364px) {
+    .product-title {
+        font-weight: 300 !important;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .product-title {
+        font-weight: 500 !important;
     }
 }
