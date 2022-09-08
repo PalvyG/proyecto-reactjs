@@ -23,6 +23,7 @@ const ItemDetailContainer = () => {
             .then(result => {
                 setProduct(result)
                 console.log('Component ItemDetailContainer.js updated.')
+                console.log(result)
             })
             .catch(error => console.error(error))
     })

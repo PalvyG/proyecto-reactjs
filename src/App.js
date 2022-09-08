@@ -12,9 +12,8 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path='/' element={<ItemListContainer greeting='Bienvenido a GPDudes!'/>} />
-        <Route path='/pepe' element={<h1 id='pepe'>pepe</h1>} />
-        <Route path='/category/:id' element={<ItemListContainer />} />
-        <Route path='/product/:id' element={<ItemDetailContainer />} />
+        <Route path='/category/:idCategory' element={<ItemListContainer />} />
+        <Route path='/product/:idProduct' element={<ItemDetailContainer />} />
       </Routes>
     </BrowserRouter>
   );
