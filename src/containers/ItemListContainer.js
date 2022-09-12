@@ -19,4 +19,4 @@ const ItemListContainer = (props) => {
 
 export default ItemListContainer;
 
-//EXPORTED TO: ../App.js
+//EXPORTED TO: ../home/Home.js
