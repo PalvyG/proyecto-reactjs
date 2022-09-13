@@ -1,6 +1,22 @@
 import ItemCount from "./ItemCount"
+import { useContext, useState } from "react"
+import { CartContext } from '../context/CartContext'
+import {Link} from 'react-router-dom'
 
-const ItemDetail = ({item}) => {
+const ItemDetail = ({ item }) => {
+
+    //CONTEXT
+    const ctxObj = useContext(CartContext)
+
+    //STATES
+    const [count, setCount] = useState(0)
+
+    const addToCart = () => {
+        alert('You have added ' + 1 + ' units to your cart.')
+        setCount(1)
+        ctxObj.onAdd(item, 1)
+        console.log(ctxObj.cartList)
+    }
 
     return (
         <div id="container-products" className="product-details d-flex">
@@ -10,7 +26,11 @@ const ItemDetail = ({item}) => {
             <div className="details__text">
                 <h1 className="details__text__title">{item.title}</h1>
                 <p className="details__text__desc">{item.desc}</p>
-                <ItemCount stock={5} />
+                {
+                    count === 0
+                    ? <ItemCount stock={5} count={count} addToCart={addToCart} />
+                    : <Link to='/cart'><button className="btn btn-danger">Checkout</button></Link>
+                }
             </div>
         </div >
     )

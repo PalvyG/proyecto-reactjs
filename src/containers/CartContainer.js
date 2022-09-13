@@ -11,4 +11,4 @@ const CartContainer = () => {
 
 export default CartContainer;
 
-//EXPORTED TO: ../home/Home.js
+//EXPORTED TO: ../pages/Home.js

@@ -41,7 +41,7 @@ const ItemList = () => {
             {
                 data.map(item => (
                     <Item
-                        key={item.id}
+                        key={item.key}
                         id={item.id}
                         title={item.title}
                         price={item.price}

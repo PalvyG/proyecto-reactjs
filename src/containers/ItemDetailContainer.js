@@ -37,4 +37,4 @@ const ItemDetailContainer = () => {
 
 export default ItemDetailContainer
 
-//EXPORTED TO: ../home/Home.js
+//EXPORTED TO: ../pages/Home.js
