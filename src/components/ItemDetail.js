@@ -11,10 +11,10 @@ const ItemDetail = ({ item }) => {
     //STATES
     const [count, setCount] = useState(0)
 
-    const addToCart = () => {
-        alert('You have added ' + 1 + ' units to your cart.')
-        setCount(1)
-        ctxObj.onAdd(item, 1)
+    const addToCart = (qty) => {
+        alert('You have added ' + qty + ' units to your cart.')
+        setCount(qty)
+        ctxObj.onAdd(item, qty)
         console.log(ctxObj.cartList)
     }
 

@@ -11,19 +11,12 @@ const ItemDetailContainer = () => {
     //PARAMS
     const { id } = useParams();
 
-    //EFFECT MOUNT
-    useEffect(() => {
-        console.log('Component ItemDetailContainer.js mounted.')
-    }, [])
-
     //EFFECT UPDATE PRODUCTS
 
     useEffect(() => {
         promiseOnLoad(products.find(product => product.id === parseInt(id)))
             .then(result => {
                 setProduct(result)
-                console.log('Component ItemDetailContainer.js updated.')
-                console.log(result)
             })
             .catch(error => console.error(error))
     })

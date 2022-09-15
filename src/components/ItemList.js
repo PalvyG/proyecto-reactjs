@@ -10,26 +10,19 @@ const ItemList = () => {
 
     //PARAMS
     const { id } = useParams();
-
-    //EFFECT MOUNT
-    useEffect(() => {
-        console.log('Component ItemList.js mounted.')
-    }, [])
-
+    
     //EFFECT UPDATE PRODUCTS
     useEffect(() => {
         if (id) {
         promiseOnLoad(products.filter(product => product.categoryId === id))
             .then(result => {
                 setData(result)
-                console.log('Component ItemList.js updated.')
             })
             .catch(error => console.error(error))
         } else {
             promiseOnLoad(products)
             .then(result => {
                 setData(result)
-                console.log('Component ItemList.js updated.')
             })
             .catch(error => console.error(error))
         } 
@@ -41,7 +34,7 @@ const ItemList = () => {
             {
                 data.map(item => (
                     <Item
-                        key={item.key}
+                        key={item.id}
                         id={item.id}
                         title={item.title}
                         price={item.price}

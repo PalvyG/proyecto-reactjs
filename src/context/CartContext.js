@@ -4,10 +4,28 @@ export const CartContext = createContext();
 
 const CartContextProvider = ({ children }) => {
     const [cartList, setCartList] = useState([]);
+    const [cartTotal, setCartTotal] = useState(0)
+
+    const cartReduce = () => {
+        const cartResult = cartList.reduce((previous, product) => previous + product.price, cartTotal)
+        console.log(cartResult)
+        setCartTotal(cartResult);
+    }
 
     const onAdd = (item, qty) => {
         let itemToAdd = { ...item, qty };
-        setCartList([...cartList, itemToAdd])
+        const dupedItem = cartList.find(product => product.id === item.id)
+        if (dupedItem === undefined) {
+            setCartList([...cartList, itemToAdd])
+            cartReduce();
+        } else {
+            const dupedItemIndex = cartList.findIndex(product => product.id === item.id);
+            const newQty = cartList[dupedItemIndex].qty + itemToAdd.qty;
+            let qty = newQty;
+            cartList[dupedItemIndex] = { ...item, qty }
+            setCartList([...cartList])
+            cartReduce();
+        }
     }
 
     const onRemove = (id) => {

@@ -1,11 +1,6 @@
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const Item = (props) => {
-
-    useEffect(() => {
-        console.log('Component Item.js mounted.')
-    }, []);
 
     return (
         <div className="card-responsive col mb-5">
@@ -26,7 +21,7 @@ const Item = (props) => {
                 {/* Product actions */}
                 <Link to={`/product/${props.id}`}>
                 <div className="card-footer p-2 pt-0 border-top-0 bg-transparent">
-                    <div className="text-center"><btn className="btn btn-danger mt-auto mb-2">Show Details</btn></div>
+                    <div className="text-center"><button className="btn btn-danger mt-auto mb-2">Show Details</button></div>
                 </div>
                 </Link>
             </div>

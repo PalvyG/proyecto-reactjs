@@ -22,7 +22,7 @@ const ItemCount = (props) => {
                     <button className="btn btn-danger" onClick={qtyAdd}>+</button>
                 </div>
                 <div>
-                    <button id="btn-addToCart" className="btn btn-danger" onClick={props.addToCart}>Add to cart</button>
+                    <button id="btn-addToCart" className="btn btn-danger" onClick={() => props.addToCart(qty)} disabled={(parseInt(qty) !== 0 ? false : true)}>Add to cart</button>
                 </div>
             </div>
         </div>
