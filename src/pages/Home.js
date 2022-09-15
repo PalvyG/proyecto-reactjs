@@ -12,7 +12,7 @@ const Home = () => {
             <BrowserRouter>
                 <Navbar />
                 <Routes>
-                    <Route path='/' element={<ItemListContainer greeting='Bienvenido a GPDudes!' />} />
+                    <Route path='/' element={<ItemListContainer greeting='Welcome to GPDudes!' />} />
                     <Route path='/category/:id' element={<ItemListContainer />} />
                     <Route path='/product/:id' element={<ItemDetailContainer />} />
                     <Route path='/cart' element={<CartContainer />} />

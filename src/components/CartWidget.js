@@ -10,7 +10,11 @@ const CartWidget = () => {
     return (
         <button type="button" id="cart-btn" className="btn btn-danger">
             <i className="fa-solid fa-cart-shopping"></i>
-            <span id="cart-string" className="badge bg-dark text-white ms-1 rounded-pill">{cartData.cartList.length} - {cartData.cartTotal}</span>
+            {
+                cartData.cartList.length === parseInt(0)
+                ? ''
+                : <span id="cart-string" className="badge bg-dark text-white ms-1 rounded-pill">{cartData.cartList.length} - ${cartData.cartTotal}</span>
+            }
         </button>
     );
 }
