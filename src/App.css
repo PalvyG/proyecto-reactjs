@@ -186,9 +186,12 @@ ul {
 
 .cart {
   font-size: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
 }
 .cart .cart__item {
-  width: 50%;
+  width: 52.5vw;
   padding: 15px;
   background-color: rgba(73, 3, 9, 0.6901960784);
   border-radius: 10px;
@@ -210,6 +213,39 @@ ul {
   margin-left: auto;
   margin-right: 20px;
   font-size: 20px;
+}
+.cart .cart-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cart .cart-right #cart-clear {
+  width: 25%;
+  min-width: 100px;
+  align-self: center;
+}
+.cart .cart-right .cart__reduce {
+  padding: 20px;
+  background-color: rgba(73, 3, 9, 0.6901960784) !important;
+  border-radius: 10px;
+}
+.cart .cart-right .cart__reduce .cart__reduce__total {
+  padding: 10px;
+  font-size: 125%;
+  background-color: rgba(65, 10, 14, 0.8470588235);
+  border-radius: 10px;
+}
+.cart .cart-right .cart__reduce .cart__reduce__total p {
+  margin-bottom: 0px;
+}
+.cart .cart-right .cart__reduce div {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.cart .cart-right .cart__reduce div b {
+  color: white;
 }
 
 .border-radius-left {

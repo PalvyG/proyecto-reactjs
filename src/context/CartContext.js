@@ -6,9 +6,27 @@ const CartContextProvider = ({ children }) => {
     const [cartList, setCartList] = useState([]);
     const [cartTotal, setCartTotal] = useState(0);
 
+    const cartWidgetAmount = () => {
+        let totalToPay = 0;
+        cartList.map(item => 
+            totalToPay += item.price * item.qty
+        )
+        return totalToPay
+    }
+
+    const cartWidgetQty = () => {
+        let totalQty = 0;
+        cartList.map(item => 
+            totalQty += item.qty
+        )
+        return totalQty
+    }
+
     const cartReduce = () => {
-        const cartResult = cartList.reduce((previous, product) => previous + (product.price * product.qty), cartTotal)
-        console.log(cartResult)
+        cartList.forEach(product => {
+            product.totalAmount = product.price * product.qty
+        });
+        const cartResult = cartList.reduce((previous, product) => previous + product.totalAmount, 0)
         setCartTotal(cartResult);
     }
 
@@ -38,7 +56,7 @@ const CartContextProvider = ({ children }) => {
     }
 
     return (
-        <CartContext.Provider value={{ cartList, cartTotal ,onAdd, onRemove, onClear }}>
+        <CartContext.Provider value={{ cartList, cartTotal, cartWidgetAmount, cartWidgetQty, onAdd, onRemove, onClear }}>
             {children}
         </CartContext.Provider>
     )
