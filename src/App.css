@@ -202,6 +202,7 @@ ul {
 .cart .cart__item img {
   width: 125px;
   height: 125px;
+  border-radius: 10px;
 }
 .cart .cart__item .cart__item__desc {
   line-height: 40px;

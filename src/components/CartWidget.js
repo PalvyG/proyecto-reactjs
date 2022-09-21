@@ -6,7 +6,6 @@ const CartWidget = () => {
     //CONTEXT
     const cartData = useContext(CartContext)
 
-
     return (
         <button type="button" id="cart-btn" className="btn btn-danger">
             <i className="fa-solid fa-cart-shopping"></i>

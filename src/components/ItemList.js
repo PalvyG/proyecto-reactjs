@@ -1,8 +1,7 @@
 import Item from './Item.js'
 import { useEffect, useState } from 'react'
-import { products } from '../utils/products.js'
-import { promiseOnLoad } from '../utils/promiseOnLoad.js'
 import { useParams } from 'react-router-dom'
+import { fsFetchList } from '../utils/firebaseConfig';
 
 const ItemList = () => {
     //STATE
@@ -10,22 +9,15 @@ const ItemList = () => {
 
     //PARAMS
     const { id } = useParams();
-    
+
     //EFFECT UPDATE PRODUCTS
+
     useEffect(() => {
-        if (id) {
-        promiseOnLoad(products.filter(product => product.categoryId === id))
-            .then(result => {
-                setData(result)
-            })
-            .catch(error => console.error(error))
-        } else {
-            promiseOnLoad(products)
-            .then(result => {
-                setData(result)
-            })
-            .catch(error => console.error(error))
-        } 
+        fsFetchList(id)
+        .then(result => {
+            console.log(result)
+            setData(result)})
+        .catch(err => console.log(err))
     }, [id])
 
     return (
