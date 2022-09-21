@@ -13,8 +13,8 @@ const Cart = () => {
     //CART AMOUNTS
     const cartNet = cartData.cartWidgetAmount();
     const cartDiscount = cartNet * 0.10;
-    const cartTax = Math.round((cartNet + Number.EPSILON) * 0.07) / 100;
-    const cartTotalToPay = cartNet + cartDiscount + cartTax
+    const cartTax = Math.round((cartNet + Number.EPSILON) * 7) / 100;
+    const cartTotalToPay = cartNet - cartDiscount + cartTax
 
 
     return (
@@ -50,7 +50,7 @@ const Cart = () => {
                                 </div>
                                 <div className='cart__reduce__discount'>
                                     <p>Discount:</p>
-                                    <b>$ {cartDiscount}</b>
+                                    <b>- $ {cartDiscount}</b>
                                 </div>
                                 <div className='cart__reduce__tax'>
                                     <p>Taxes:</p>
