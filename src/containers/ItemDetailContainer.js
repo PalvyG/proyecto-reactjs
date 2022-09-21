@@ -15,6 +15,7 @@ const ItemDetailContainer = () => {
     useEffect(() => {
         fsFetchDetail(id)
             .then(result => {
+                console.log(result)
                 setProduct(result)
             })
             .catch(error => console.error(error))

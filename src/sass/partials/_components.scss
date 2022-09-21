@@ -122,13 +122,20 @@
     gap: 50px;
     padding: 20px;
 
-    .details__img {
-        border-radius: $b-r-img;
+    .img-cont {
+
+        .img {
+            max-width: 500px;
+            max-height: 500px;
+            width: 35vw;
+            height: 35vw;
+            border-radius: $b-r-img;
+        }
     }
 
     .details__text {
 
-        height: 100%;
+        height: calc(100% - 160px);
 
         .details__text__title {
             font-size: 300%;
@@ -137,12 +144,34 @@
         .details__text__desc {
             font-size: 125%;
         }
+
+    }
+
+    .details__bottom {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+
+        .details__bottom__price,
+        .details__bottom__stock {
+            margin-top: 8px;
+            margin-bottom: 8px;
+
+            .fa-boxes-stacked,
+            .fa-money-bill-1 {
+                font-size: 130%;
+                margin-right: 15px;
+            }
+
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        
     }
 }
 
 .item-count {
-
-    position: absolute;
     bottom: 20px;
     background-color: $red-bg-dark;
     padding: 20px;

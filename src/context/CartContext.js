@@ -36,6 +36,7 @@ const CartContextProvider = ({ children }) => {
         if (dupedItem === undefined) {
             setCartList([...cartList, itemToAdd])
             cartReduce();
+            console.log(cartList)
         } else {
             const dupedItemIndex = cartList.findIndex(product => product.id === item.id);
             const newQty = cartList[dupedItemIndex].qty + itemToAdd.qty;
@@ -43,6 +44,7 @@ const CartContextProvider = ({ children }) => {
             cartList[dupedItemIndex] = { ...item, qty }
             setCartList([...cartList])
             cartReduce();
+            console.log(cartList)
         }
     }
 

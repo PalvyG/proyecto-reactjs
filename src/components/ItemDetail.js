@@ -20,19 +20,27 @@ const ItemDetail = ({ item }) => {
 
     return (
         <div id="container-products" className="product-details d-flex">
-            <div className="details__img-cont">
-                <img className="details__img" src={item.img} alt="Product" />
+            <div className="img-cont">
+                <img className="img" src={item.img} alt="Product" />
             </div>
+            <div className="details">
             <div className="details__text">
                 <h1 className="details__text__title">{item.title}</h1>
                 <p className="details__text__desc">{item.desc}</p>
+            </div>
+            <div className="details__bottom">
                 {
                     count === 0
-                    ? <ItemCount stock={5} count={count} addToCart={addToCart} />
+                    ? <ItemCount stock={item.stock} count={count} addToCart={addToCart} />
                     : <Link to='/cart'><button className="btn btn-danger">Checkout</button></Link>
                 }
+                <section>
+                <p className="details__bottom__price"><i class="fa-regular fa-money-bill-1"></i> Price - <i class="fa-solid fa-dollar-sign"></i> {item.price}</p>
+                <p className="details__bottom__stock"><i class="fa-solid fa-boxes-stacked"></i> Stock - {item.stock} units</p>
+                </section>
             </div>
-        </div >
+            </div>
+        </div>
     )
 }
 

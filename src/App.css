@@ -136,11 +136,15 @@ ul {
   gap: 50px;
   padding: 20px;
 }
-.product-details .details__img {
+.product-details .img-cont .img {
+  max-width: 500px;
+  max-height: 500px;
+  width: 35vw;
+  height: 35vw;
   border-radius: 10px;
 }
 .product-details .details__text {
-  height: 100%;
+  height: calc(100% - 160px);
 }
 .product-details .details__text .details__text__title {
   font-size: 300%;
@@ -148,9 +152,27 @@ ul {
 .product-details .details__text .details__text__desc {
   font-size: 125%;
 }
+.product-details .details__bottom {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+.product-details .details__bottom .details__bottom__price,
+.product-details .details__bottom .details__bottom__stock {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: 500;
+}
+.product-details .details__bottom .details__bottom__price .fa-boxes-stacked,
+.product-details .details__bottom .details__bottom__price .fa-money-bill-1,
+.product-details .details__bottom .details__bottom__stock .fa-boxes-stacked,
+.product-details .details__bottom .details__bottom__stock .fa-money-bill-1 {
+  font-size: 130%;
+  margin-right: 15px;
+}
 
 .item-count {
-  position: absolute;
   bottom: 20px;
   background-color: rgba(65, 10, 14, 0.8470588235);
   padding: 20px;
