@@ -260,10 +260,17 @@
         flex-direction: column;
         gap: 10px;
 
-        #cart-clear {
-            width: 25%;
-            min-width: 100px;
-            align-self: center;
+        .cart__commands {
+            display: flex;
+            width: 100%;
+            gap: 20px;
+
+            button {
+                width: 100%;
+                font-weight: 500;
+                box-shadow: $box-shadow;
+                font-size: 100%;
+            }
         }
 
         .cart__reduce {

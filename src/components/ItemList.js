@@ -15,7 +15,6 @@ const ItemList = () => {
     useEffect(() => {
         fsFetchList(id)
         .then(result => {
-            console.log(result)
             setData(result)})
         .catch(err => console.log(err))
     }, [id])

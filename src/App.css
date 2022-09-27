@@ -247,10 +247,16 @@ a {
   flex-direction: column;
   gap: 10px;
 }
-.cart .cart-right #cart-clear {
-  width: 25%;
-  min-width: 100px;
-  align-self: center;
+.cart .cart-right .cart__commands {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+.cart .cart-right .cart__commands button {
+  width: 100%;
+  font-weight: 500;
+  box-shadow: 0px 0px 10px 1px rgb(50, 50, 50);
+  font-size: 100%;
 }
 .cart .cart-right .cart__reduce {
   padding: 20px;

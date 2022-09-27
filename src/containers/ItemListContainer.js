@@ -1,5 +1,4 @@
 import ItemList from '../components/ItemList.js';
-import {products} from '../utils/products.js';
 
 
 const ItemListContainer = (props) => {
@@ -7,7 +6,7 @@ const ItemListContainer = (props) => {
     return (
         <main>
             <h1 className='greeting'>{props.greeting}</h1>
-            <ItemList products={products} />
+            <ItemList/>
         </main>
     );
 };
