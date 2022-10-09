@@ -116,10 +116,9 @@
 
 .product-details {
 
-    position: relative;
     border-radius: $b-r-img;
     background-color: $red-bg-dark-translucent;
-    gap: 50px;
+    gap: 2.5%;
     padding: 20px;
 
     .img-cont {
@@ -172,7 +171,6 @@
 }
 
 .item-count {
-    bottom: 20px;
     background-color: $red-bg-dark;
     padding: 20px;
     width: fit-content;
@@ -221,7 +219,7 @@
     font-size: 18px;
     display: flex;
     justify-content: center;
-    gap: 100px;
+    gap: 50px;
 
     .cart__item {
         width: 52.5vw;
@@ -239,8 +237,9 @@
         }
 
         .cart__item__desc {
-
-            line-height: 40px;
+            margin-left: 30px;
+            line-height: 30px;
+            font-size: 16px;
 
             p {
                 margin-bottom: 0px;
@@ -249,8 +248,8 @@
 
         button {
             margin-left: auto;
-            margin-right: 20px;
-            font-size: 20px;
+            margin-right: 10px;
+            font-size: 18px;
         }
     }
 

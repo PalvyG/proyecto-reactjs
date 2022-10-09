@@ -20,17 +20,6 @@ const ItemDetailContainer = () => {
             .catch(error => console.error(error))
     }, [id])
 
-
-
-    // //EFFECT UPDATE PRODUCT
-    // useEffect(() => {
-    //     promiseOnLoad(products.find(product => product.id === parseInt(id)))
-    //         .then(result => {
-    //             setProduct(result)
-    //         })
-    //         .catch(error => console.error(error))
-    // })
-
     return (
         <main>
             <ItemDetail item={product} />
