@@ -32,7 +32,7 @@ const ItemDetail = ({ item }) => {
                 {
                     count === 0
                     ? <ItemCount stock={item.stock} count={count} addToCart={addToCart} />
-                    : <Link to='/cart'><button className="btn btn-danger">Checkout</button></Link>
+                    : <Link to='/proyecto-reactjs/cart'><button className="btn btn-danger">Checkout</button></Link>
                 }
                 <section>
                 <p className="details__bottom__price"><i class="fa-regular fa-money-bill-1"></i> Price - <i class="fa-solid fa-dollar-sign"></i> {item.price}</p>

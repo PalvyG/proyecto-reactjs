@@ -49,7 +49,7 @@ const CartContextProvider = ({ children }) => {
     }
 
     const onRemove = (id) => {
-        let cartListFiltered = cartList.filter(item => item.id !== parseInt(id));
+        let cartListFiltered = cartList.filter(item => item.id != id);
         setCartList(cartListFiltered)
     }
 

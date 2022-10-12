@@ -12,10 +12,10 @@ const Home = () => {
             <BrowserRouter>
                 <Navbar />
                 <Routes>
-                    <Route path='/' element={<ItemListContainer greeting='Welcome to GPDudes!' />} />
-                    <Route path='/category/:id' element={<ItemListContainer />} />
-                    <Route path='/product/:id' element={<ItemDetailContainer />} />
-                    <Route path='/cart' element={<CartContainer />} />
+                    <Route path='/proyecto-reactjs/' element={<ItemListContainer greeting='Welcome to GPDudes!' />} />
+                    <Route path='/proyecto-reactjs/category/:id' element={<ItemListContainer />} />
+                    <Route path='/proyecto-reactjs/product/:id' element={<ItemDetailContainer />} />
+                    <Route path='/proyecto-reactjs/cart' element={<CartContainer />} />
                 </Routes>
             </BrowserRouter>
         </CartContextProvider>

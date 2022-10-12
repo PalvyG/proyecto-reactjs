@@ -6,7 +6,7 @@ const NavbarLinks = () => {
     return (
         <div className="navbar__links">
             <div className="btn-group">
-                <Link to='/category/gpu'>
+                <Link to='/proyecto-reactjs/category/gpu'>
                     <button type="button" className="btn btn-danger border-radius-left">
                         {
                             mediaQueryTablet.matches
@@ -21,7 +21,7 @@ const NavbarLinks = () => {
                         }
                     </button>
                 </Link>
-                <Link to='/category/processor'>
+                <Link to='/proyecto-reactjs/category/processor'>
                     <button type="button" className="btn btn-danger border-radius-none">
                         {
                             mediaQueryTablet.matches
@@ -34,7 +34,7 @@ const NavbarLinks = () => {
                         }
                     </button>
                 </Link>
-                <Link to='/category/cooler'>
+                <Link to='/proyecto-reactjs/category/cooler'>
                     <button type="button" className="btn btn-danger border-radius-right">
                         {
                             mediaQueryTablet.matches

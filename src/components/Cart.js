@@ -78,7 +78,7 @@ const Cart = () => {
                     ?
                     <>
                         <p>Your cart is empty!</p>
-                        <Link to='/'><button type="button" className="btn btn-danger">Continue shopping</button></Link>
+                        <Link to='/proyecto-reactjs/'><button type="button" className="btn btn-danger">Continue shopping</button></Link>
                     </>
                     :
                     <div className='cart d-flex'>

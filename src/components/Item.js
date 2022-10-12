@@ -19,7 +19,7 @@ const Item = (props) => {
                     </div>
                 </div>
                 {/* Product actions */}
-                <Link to={`/product/${props.id}`}>
+                <Link to={`/proyecto-reactjs/product/${props.id}`}>
                 <div className="card-footer p-2 pt-0 border-top-0 bg-transparent">
                     <div className="text-center"><button className="btn btn-danger mt-auto mb-2">Show Details</button></div>
                 </div>
