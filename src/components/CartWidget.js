@@ -12,7 +12,7 @@ const CartWidget = () => {
             {
                 cartData.cartList.length === parseInt(0)
                 ? ''
-                : <span id="cart-string" className="badge bg-dark text-white ms-1 rounded-pill">{cartData.cartWidgetQty()} - ${cartData.cartWidgetAmount()}</span>
+                : <span id="cart-string" className="badge bg-dark text-white ms-1 rounded-pill">{cartData.cartWidgetQty()}</span>
             }
         </button>
     );

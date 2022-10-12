@@ -10,19 +10,19 @@ const Navbar = () => {
         <>
             <header className="App-header">
                 <nav className="navbar">
-                    {
-                        mediaQueryTablet.matches
-                            ?
-                            <button type="button" id="home-btn" className="btn btn-danger">
-                                <i class="fa-solid fa-house"></i>
-                            </button>
-                            :
-                            <Link to='/proyecto-reactjs/'>
-                                <div className="logo">
+                    <Link to='/proyecto-reactjs/'>
+                        {
+                            mediaQueryTablet.matches
+                                ?
+                                <button type="button" id="home-btn" className="btn btn-danger">
+                                    <i class="fa-solid fa-house"></i>
+                                </button>
+                                :
+                                < div className="logo">
                                     <img src="https://images-platform.99static.com/Rvr4iFxZiT_9HPJgLWI8unYbTAY=/180x180:1620x1620/500x500/top/smart/99designs-contests-attachments/85/85417/attachment_85417654" alt="Logotipo" />
                                 </div>
-                            </Link>
-                    }
+                        }
+                    </Link>
                     <NavbarLinks />
                     <div>
                         <div className="navbar__signin-cart">
