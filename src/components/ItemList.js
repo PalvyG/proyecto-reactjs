@@ -20,6 +20,7 @@ const ItemList = () => {
     }, [id])
 
     return (
+        <>
         <div id="container-products"
             className="row gx-4 gx-lg-5 row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 justify-content-center">
             {
@@ -34,6 +35,7 @@ const ItemList = () => {
                 ))
             }
         </div>
+        </>
     )
 }
 

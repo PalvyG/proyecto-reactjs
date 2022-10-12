@@ -81,6 +81,13 @@
 }
 
 @media screen and (max-width: 768px) {
+    .navbar {
+        .navbar__signin-cart {
+            gap: 7.5px;
+            padding-right: 2.5vw;
+        }
+    }
+
     .product-details {
         flex-direction: column;
         gap: 10px !important;
@@ -181,7 +188,7 @@
         margin-bottom: 15px !important;
 
         .card {
-            min-width: 150px !important;
+            min-width: 165px !important;
 
             .product-title {
                 font-size: 14px !important;

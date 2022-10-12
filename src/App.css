@@ -48,9 +48,12 @@ a {
   background-position: center;
   box-shadow: 0px 0px 10px 1px rgb(50, 50, 50);
 }
-.navbar ul {
-  display: flex;
-  gap: 10px;
+.navbar #home-btn {
+  box-shadow: 0px 0px 10px 1px rgb(50, 50, 50);
+  margin-left: 2.5vw;
+}
+.navbar #home-btn .fa-house {
+  font-size: 20px;
 }
 .navbar .logo {
   padding-left: 5vw;
@@ -93,7 +96,7 @@ a {
 .navbar .navbar__signin-cart #cart-btn .bg-dark {
   background-color: #9c2632 !important;
 }
-.navbar .navbar__signin-cart .fa-cart-shopping {
+.navbar .navbar__signin-cart .fa-cart-shopping, .navbar .navbar__signin-cart .fa-user {
   font-size: 20px;
 }
 
@@ -358,6 +361,10 @@ a {
   }
 }
 @media screen and (max-width: 768px) {
+  .navbar .navbar__signin-cart {
+    gap: 7.5px;
+    padding-right: 2.5vw;
+  }
   .product-details {
     flex-direction: column;
     gap: 10px !important;
@@ -429,7 +436,7 @@ a {
     margin-bottom: 15px !important;
   }
   .card-responsive .card {
-    min-width: 150px !important;
+    min-width: 165px !important;
   }
   .card-responsive .card .product-title {
     font-size: 14px !important;

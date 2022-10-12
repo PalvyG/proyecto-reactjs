@@ -12,7 +12,7 @@ const ItemDetail = ({ item }) => {
     const [count, setCount] = useState(0)
 
     const addToCart = (qty) => {
-        alert('You have added ' + qty + ' units to your cart.')
+        alert('You have added "' + item.title + '" (' + qty +  ' units) to your cart.')
         setCount(qty)
         ctxObj.onAdd(item, qty)
         console.log(ctxObj.cartList)

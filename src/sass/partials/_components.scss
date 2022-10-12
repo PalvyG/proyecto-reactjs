@@ -10,9 +10,13 @@
     background-position: center;
     box-shadow: $box-shadow;
 
-    ul {
-        display: flex;
-        gap: 10px;
+    #home-btn {
+        box-shadow: $box-shadow;
+        margin-left: 2.5vw;
+
+        .fa-house {
+            font-size: 20px;
+        }
     }
 
     .logo {
@@ -59,11 +63,11 @@
             gap: 10px;
 
             .bg-dark {
-                background-color: $red-btn-dark  !important;
+                background-color: $red-btn-dark !important;
             }
         }
 
-        .fa-cart-shopping {
+        .fa-cart-shopping, .fa-user {
             font-size: 20px;
         }
     }
@@ -166,7 +170,7 @@
             font-weight: 500;
         }
 
-        
+
     }
 }
 
@@ -274,7 +278,7 @@
 
         .cart__reduce {
             padding: 20px;
-            background-color: $red-bg-dark-translucent  !important;
+            background-color: $red-bg-dark-translucent !important;
             border-radius: $b-r-img;
 
             .cart__reduce__total {
@@ -303,15 +307,15 @@
 }
 
 .border-radius-left {
-    border-radius: $b-r-btn-left  !important;
+    border-radius: $b-r-btn-left !important;
 }
 
 .border-radius-none {
-    border-radius: $b-r-btn-none  !important;
+    border-radius: $b-r-btn-none !important;
 }
 
 .border-radius-right {
-    border-radius: $b-r-btn-right  !important;
+    border-radius: $b-r-btn-right !important;
 }
 
 ;
