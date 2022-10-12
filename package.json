@@ -1,7 +1,7 @@
 {
   "homepage": "https://palvyg.github.io/proyecto-reactjs",
   "name": "proyecto-reactjs",
-  "version": "6.3.0",
+  "version": "6.4.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
