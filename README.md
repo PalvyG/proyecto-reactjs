@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# GPDudes - A React.js project.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created to be presented as the final installment of the React.js course taken on the learning platform Coderhouse.
+Developed by: Pablo Daniel Álvarez Graña.
+LinkedIn: https://www.linkedin.com/in/pablo-daniel-%C3%A1lvarez-gra%C3%B1a-842487244/
 
-## Available Scripts
+## About the project
 
-In the project directory, you can run:
+The assignment was to create an E-Commerce, developing its flow, functionalities and user interface.
+Style development was not evaluated, but was strongly encouraged.
 
-### `npm start`
+My take on this project was to develop a Hardware E-Commerce, named GPDudes.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies implemented
 
-### `npm test`
+In this E-Commerce, you will find that the base structure was built around React.js with additional use of Javascript - Nonetheless, there are other technologies involved, such as CSS3, SASS and Bootstrap for additional styles, Git for versioning control, and Firebase for data storage.
+Next, here is a list of the specific usage each tool was given.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### React.js
 
-### `npm run build`
+- Main structure of the project, built component-oriented and with a Single Page Application workflow.
+- Hooks for data saving and updating (useState and useEffect).
+- Use of Context for a better and more specific and optimized DOM handling.
+- Navigability via `react-router-dom` dependencies.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Javascript
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Basic and intermediate functions used for specific purposes such as events (e.g. onClicks) and validations (e.g. conditional rendering).
+- Definition of variables for its subsequent use in the aforementioned structure.
+- Usage of promises (async) for data storage (cart list and purchase orders) and data loading (item list and item detail).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### CSS3, SASS, Bootstrap
 
-### `npm run eject`
+- **Bootstrap**: Pre-defined styles for grid and flex layouts, as well as basic HTML5 components (e.g. buttons).
+- **CSS3**: Main tool for personalized styles, and ocasional overriddance of unwanted Bootstrap's pre-defined styles.
+- **SASS**: Style modularization and logic-based styles, such as variables.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Firebase
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Data storage (products and purchase orders).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Git
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Versioning control and commit pushing (to remote GitHub repository).
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Dependencies and Package Management
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+For package management purposes, the tool selected for usage was npm.js.
+As far as dependencies, this project has only 3:
+- `react`, which is automatically installed via the `create-react-app` command executed in the console when creating the template for the project.
+- `react-router-dom`, used for navigability purposes and previously mentioned in the **React.js** section of **Technologies implemented**.
+- `firebase`, used for storage purposes and required for proper **Firestore** implementation.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Summary
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Having specified what the project is about, what its purpose was, and ennumerating all the tools used to develop it, I'd love for you to check it out!
+It may be a little basic - but it has all the main features any E-Commerce has: A catalogue of products, their detailed view, a shopping cart, and a process that automatically generates purchase orders.
